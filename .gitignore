@@ -16,6 +16,12 @@
 /.htaccess
 /admin/.htaccess
 /Capfile
+/themes/aezel/images
+/files
+/application/logs
+/.vscode
+/themes/aezel/bower_components
+/themes/aezel/sass
 
 #################
 ## Eclipse
@@ -179,6 +185,3 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
-
-
-
