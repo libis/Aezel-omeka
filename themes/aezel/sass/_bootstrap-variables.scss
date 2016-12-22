@@ -40,35 +40,31 @@
 
 
 // Colors
-//
+$rood:#e8393a;
+$rood-donker:#AB2222;
+$groen:#41a949;
+$groen-donker:#0E763D;
+$blauw:#3775bb;
+$blauw-donker:#125AAA;
+$oranje:#facb41;
+$oranje-donker:#EE7316;
+
 // Grayscale and brand colors for use across Bootstrap.
-$gray-base:              #000;
+$gray-base:                 #000;
 $gray-dark:                 #333 !default;
 $gray:                      #666 !default;
 $gray-light:                #ccc !default;
 $gray-lighter:              #eee !default;
 $gray-lightest:             #f6f6f6 !default;
 
-$brand-primary: lighten(#AB2222,10%);//#d52b2b;
+$brand-primary:             $rood;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 $brand-inverse:             $gray-dark !default;
 
-$brand-light:#FFF3E0;
-
-$brand-primary-dark:lighten(#AB2222,10%);//#d32f2f;
-$brand-gray:#9b3434;
-$brand-primary-light: #ffcdd2;
-$brand-primary-lighter: #faddd7;
-
-$lighter:#f6f2eb;
-$bg2:#ede4d5;
 $bg:#fafafa;
-
-$accent: #39cce8;
-$accent2:#d9d9d9;
 
 // Options
 //

@@ -96,40 +96,18 @@
             <p class="caption">Markt Roermond 19xx</p>-->
 
             <p>Het <b>Aezel Projek</b>, ofwel “Archief voor Erfgoed van Zuid-Nederlandse Eigendommen en Leefgemeenschappen”, heeft tot doel de versnipperde erfgoed-informatie in Zuid Nederland te digitaliseren, te bundelen en voor het brede publiek beschikbaar te stellen via het internet.</p>
-            <p class="lees-meer"><a  href="#" role="button">Lees meer</a></p>
+            <p class="lees-meer"><a  href="<?php echo url('over'); ?>" role="button">Lees meer</a></p>
             </section>
         </div>
 
         <div class="col-sm-7">
             <section class='nieuws'>
                 <h3><span>Nieuws</span></h3>
-                <div class="row nieuws-item">
-                    <div class="col-sm-4 icon-block"><img src="<?php echo img("bg6.png");?>"></div>
-                    <div class="col-sm-8 icon-block">
-                        <h5>14-08-2016</h5>
-                        <h4>Fusce dapibus</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                        <p class="lees-meer"><a href="#" role="button">Lees Meer</a></p>
-                    </div>
-                </div>
-                <div class="row nieuws-item">
-                    <div class="col-sm-4 icon-block"><img src="<?php echo img("foto.jpg");?>"></div>
-                    <div class="col-sm-8 icon-block">
-                        <h5>14-08-2016</h5>
-                        <h4>Etiam porta sem malesuada</h4>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                        <p class="lees-meer"><a href="#" role="button">Lees Meer</a></p>
-                    </div>
-                </div>
-                <div class="row nieuws-item">
-                    <div class="col-sm-4 icon-block"><img src="<?php echo img("bg5.jpg");?>"></div>
-                    <div class="col-sm-8 icon-block">
-                        <h5>14-08-2016</h5>
-                        <h4>Cras justo odio</h4>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                        <p class="lees-meer"><a  href="#" role="button">Lees Meer</a></p>
-                    </div>
-                </div>
+
+                    <?php
+                      echo libis_get_news();
+                    ?>
+
             </section>
         </div>
     </div>

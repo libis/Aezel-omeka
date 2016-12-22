@@ -35,9 +35,9 @@ hr {
 /* NAVBAR */
 .navbar-default {
     margin-bottom: 0;
-    border-bottom: 1px solid darken($brand-primary-dark,8%);
+    border-bottom: 1px solid darken($brand-primary,4%);
     padding-bottom:0;
-    background: $brand-primary-dark; //darken($brand-primary,30%);
+    background: $brand-primary;
 
     .brand-row {
         border-bottom: 1px dotted white;
@@ -91,6 +91,7 @@ hr {
             font-size: 0.9em;
             padding: 10px;
             line-height: 20px;
+            top:95%;
         }
 
         .dropdown-menu li a {
@@ -362,41 +363,41 @@ hr {
             }
 
             .wie {
-                border-bottom: 2px solid rgba(#0E763D,0.8);
-                color: #0E763D;
+                border-bottom: 2px solid rgba($groen-donker,0.8);
+                color: $groen-donker;
 
                 .lees-meer a {
-                    background: #0E763D;
+                    background: $groen-donker;
                     color: #fff;
                 }
             }
 
             .wat {
-                border-bottom: 2px solid rgba(#AB2222,0.8);
-                color: #AB2222;
+                border-bottom: 2px solid rgba($rood-donker,0.8);
+                color: $rood-donker;
 
                 .lees-meer a {
-                    background: #AB2222;
+                    background: $rood-donker;
                     color: #fff;
                 }
             }
 
             .waar {
-                border-bottom: 2px solid rgba(#125AAA,0.8);
-                color: #125AAA;
+                border-bottom: 2px solid rgba($blauw-donker,0.8);
+                color: $blauw-donker;
 
                 .lees-meer a {
-                    background: #125AAA;
+                    background: $blauw-donker;
                     color: #fff;
                 }
             }
 
             .wanneer {
-                border-bottom: 2px solid rgba(#EE7316,0.8);
-                color: #EE7316;
+                border-bottom: 2px solid rgba($oranje-donker,0.8);
+                color: $oranje-donker;
 
                 .lees-meer a {
-                    background: #EE7316;
+                    background: $oranje-donker;
                     color: #fff;
                 }
             }
@@ -533,7 +534,6 @@ hr {
         font-family: $font-family-serif;
         font-style: italic;
         font-weight: bold;
-        background: lighten($brand-primary,40%);
         border-left: 3px solid $brand-primary;
 
         li {
@@ -547,6 +547,184 @@ hr {
             border: none;
         }
     }
+}
+
+.exhibits{
+
+  .content{
+    padding:0;
+
+    img{
+      width:100%;
+      margin-bottom:20px;
+    }
+  }
+
+  .browse{
+    padding-top:3rem;
+  }
+
+  .secondary-nav{
+    clear:both;
+    overflow:auto;
+  }
+
+  .lees-meer{
+    text-align:right;
+    font-family: $font-family-sans-serif;
+    font-style: italic;
+    padding-bottom:1rem;
+  }
+
+  .top{
+    padding:3rem 0 1rem 0;
+  }
+
+  #content{
+    .nav {
+      font-size: 1.3em;
+      margin: 0;
+      padding: 0.6em 1em;
+      font-family: $font-family-serif;
+      font-style: italic;
+      font-weight: bold;
+      border-left: 3px solid $brand-primary;
+
+      h4{
+        font-weight:bold;
+        font-size:1.3rem !important;
+      }
+
+      ul{
+        margin:0 !important;
+        padding:0 !important;
+        list-style: none;
+        font-weight:200;
+      }
+
+      li {
+          padding: 0.3em 0;
+          border-bottom: 1px solid lighten($brand-primary,20%);
+
+          a {}
+      }
+
+      li:last-child {
+          border: none;
+      }
+    }
+  }
+}
+
+.summary{
+
+}
+
+.solr-container{
+  .content{
+    padding:3rem 0;
+  }
+
+  #solr-search-form{
+    padding-bottom:2rem;
+
+    input[type="submit"]{
+      background: rgba($brand-primary,1);
+      text-transform: uppercase;
+      font-family: $font-family-serif;
+      color:white;
+      border:none;
+      padding:0 9px;
+      height:2.2rem;
+      font-size: 0.9rem;
+      border-radius: 2px;
+    }
+
+    input[type="text"]{
+      border:1px solid rgba($brand-primary,0.8);
+      padding:6px;
+      height:2.2rem;
+      min-width:250px;
+      border-radius: 2px;
+    }
+  }
+
+  h2{
+      font-weight:300;
+      font-size:1.3rem;
+      color: rgba($gray-dark,0.8);
+      margin-bottom:15px;
+  }
+
+  .result{
+    padding:1rem;
+    background: rgba($bg,0.8);
+    border-bottom:2px solid #fff;
+
+    .result-title{
+      font-size:1.2rem;
+    }
+  }
+
+  #solr-facets{
+    strong{
+      font-size:1rem;
+    }
+
+    ul{
+      margin:5px 0;
+
+      li{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.item{
+
+  .date{
+    padding:0 0 5px 0;
+    color: $gray;
+  }
+
+  .author{
+    padding-top:10px;
+    font-weight: 200;
+  }
+
+  .item-file{
+    margin-bottom:1rem;
+
+    img{
+      max-width:100%;
+    }
+  }
+
+  .element{
+    clear:both;
+    font-family: $font-family-serif;
+
+    h3{
+      float:left;
+      width:200px;
+      font-style: normal;
+      font-weight:300;
+      font-size: 1.1rem;
+      font-family: $font-family-sans-serif;
+    }
+  }
+
+  .item-pagination{
+    list-style:none;
+    margin:30px 0 0 0;
+    padding:0;
+
+    .next{
+      float:right;
+      width:auto;
+    }
+  }
 }
 
 .dropdown:hover .dropdown-menu {

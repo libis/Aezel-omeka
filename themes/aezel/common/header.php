@@ -16,10 +16,11 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
+    <!-- Determine color and logo -->
+    <?php $style = get_color();?>
+
     <!-- Plugin Stuff -->
-
     <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
-
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,200' rel='stylesheet' type='text/css'>
@@ -27,7 +28,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('iconfonts','style'));
+    queue_css_file(array('iconfonts',$style["kleur"]));
     queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 
@@ -38,7 +39,7 @@
     <?php
     echo head_js();
     ?>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
@@ -49,8 +50,7 @@
         <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
 
-            <?php echo link_to_home_page(theme_logo().option('site_title'),array('class'=>'navbar-brand')); ?>
-
+            <?php echo link_to_home_page("<img src='".img("/logos/".$style["logo"].".png")."'>".option('site_title'), array('class'=>'navbar-brand')); ?>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <?php echo public_nav_main_bootstrap(); ?>
