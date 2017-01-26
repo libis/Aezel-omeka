@@ -91,11 +91,11 @@
         <div class="col-sm-5">
             <section class="intro">
             <H3><span>Over ons</span></h3>
-            <h1>bewoners en bewoningsgeschiedenis</h1>
-            <!--<img src="<?php echo img("roermond.jpg");?>">
-            <p class="caption">Markt Roermond 19xx</p>-->
 
-            <p>Het <b>Aezel Projek</b>, ofwel “Archief voor Erfgoed van Zuid-Nederlandse Eigendommen en Leefgemeenschappen”, heeft tot doel de versnipperde erfgoed-informatie in Zuid Nederland te digitaliseren, te bundelen en voor het brede publiek beschikbaar te stellen via het internet.</p>
+              <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
+                  <p><?php echo $homepageText; ?></p>
+              <?php endif; ?>
+
             <p class="lees-meer"><a  href="<?php echo url('over'); ?>" role="button">Lees meer</a></p>
             </section>
         </div>
@@ -103,11 +103,10 @@
         <div class="col-sm-7">
             <section class='nieuws'>
                 <h3><span>Nieuws</span></h3>
-
-                    <?php
-                      echo libis_get_news();
-                    ?>
-                    <p><a href="">Meer nieuws</a></p>
+                  <?php
+                    echo libis_get_news();
+                  ?>
+                  <p class="meer-nieuws"><a href="">Meer nieuws</a></p>
             </section>
         </div>
     </div>

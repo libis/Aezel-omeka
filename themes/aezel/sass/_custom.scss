@@ -477,6 +477,14 @@ hr {
             color:rgba($gray-dark,0.8);
         }
 
+        .meer-nieuws a {
+            font-weight: bold;
+            font-family: $font-family-sans-serif;
+            float: right;
+            text-transform: capitalize;
+            padding: 10px 0;
+        }
+
         .nieuws-item {
             padding: 0 0 40px;
 
