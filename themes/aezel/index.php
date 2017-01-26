@@ -107,7 +107,7 @@
                     <?php
                       echo libis_get_news();
                     ?>
-
+                    <p><a href="">Meer nieuws</a></p>
             </section>
         </div>
     </div>

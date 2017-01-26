@@ -59,7 +59,7 @@ function get_color()
 
 function libis_get_news($tag = "")
 {
-    $items = get_records('Item', array('type'=>'Nieuws'), 3);
+    $items = get_records('Item', array('type'=>'Nieuws','sort_field' => 'added', 'sort_dir' => 'd'), 3);
     if (!$items) : ?>
         <p>Er is geen recent nieuws.</p>
     <?php endif; ?>
