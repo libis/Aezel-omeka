@@ -65,13 +65,14 @@ function libis_get_news($tag = "")
     <?php endif; ?>
     <?php foreach ($items as $item) :?>
       <div class="row nieuws-item">
-        <div class="col-sm-4 col-xs-12 icon-block">
-          <?php if (metadata($item, 'has files')) : ?>
-          <div class="element-text"><?php echo files_for_item(array('imageSize' => 'thumbnail'), array(), $item); ?></div>
-          <?php endif; ?>
-        </div>
-
-        <div class="col-sm-8 icon-block">
+        <?php if (metadata($item, 'has files')) : ?>
+          <div class="col-sm-4 col-xs-12 icon-block">
+            <div class="element-text"><?php echo files_for_item(array('imageSize' => 'thumbnail'), array(), $item); ?></div>
+          </div>
+          <div class="col-sm-8 icon-block">
+        <?php else:?>
+          <div class="col-sm-12 icon-block">
+        <?php endif; ?>
           <h5><?php echo metadata($item, array('Dublin Core', 'Date')); ?></h5>
           <h4><?php echo metadata($item, array('Dublin Core', 'Title')); ?></h4>
           <p><?php echo metadata($item, array('Dublin Core', 'Description'), array('snippet'=>250)); ?></p>

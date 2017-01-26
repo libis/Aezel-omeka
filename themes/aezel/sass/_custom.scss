@@ -38,6 +38,7 @@ hr {
     border-bottom: 1px solid darken($brand-primary,4%);
     padding-bottom:0;
     background: $brand-primary;
+    padding-top:0;
 
     .brand-row {
         border-bottom: 1px dotted white;
@@ -58,7 +59,8 @@ hr {
             padding: 5px 0 0px 0px;
             float:left;
             line-height:60px;
-            margin: 0 10px 0 0px;
+            vertical-align: bottom;
+            margin: 4px 10px 0 0px;
             vertical-align: text-bottom;
         }
     }
@@ -79,7 +81,7 @@ hr {
             font-weight: bold;
             color: white;
             padding-bottom: 3px;
-            font-size: 1em;
+            font-size: 0.8rem;
             padding-left: 0;
             padding-right: 0;
         }
@@ -299,7 +301,6 @@ hr {
         }
 
         h3{
-            border-bottom: 1px solid rgba($brand-primary,0.4);
             padding-bottom: 5px;
             color:rgba($gray-dark,0.8);
         }
@@ -341,7 +342,6 @@ hr {
         span {
             border: none;
             padding-bottom: 5px;
-            border-bottom: 1px solid rgba($brand-primary,0.4);
         }
     }
 
@@ -404,6 +404,7 @@ hr {
 
             .well {
                 background: #fff;
+                height:305px;
             }
 
             h2 {
@@ -522,7 +523,7 @@ hr {
         background: #fff;
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
         }
     }
 
