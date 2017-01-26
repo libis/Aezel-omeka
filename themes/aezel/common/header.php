@@ -23,12 +23,12 @@
     <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,200' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('iconfonts',$style["kleur"]));
+    queue_css_file(array('iconfonts','style.min',$style["kleur"]));
     queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 

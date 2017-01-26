@@ -30,7 +30,7 @@ function get_color()
     //colors: page id -> different css (production)
     $colors = array(
       "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
-      "8" => array("kleur" => "style", "logo" => "book_logo"),//default
+      "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
       "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
       "10" => array("kleur" => "oranje", "logo" => "clock_logo")
     );
