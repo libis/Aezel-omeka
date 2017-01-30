@@ -81,3 +81,25 @@ function libis_get_news($tag = "")
     </div>
     <?php endforeach;
 }
+
+function libis_get_featured_exhibits()
+{
+  $exhibits = get_records('Exhibit', array('sort_field' => 'added', 'sort_dir' => 'd'), 3);
+
+  $i = 0;
+  foreach($exhibits as $exhibit):?>
+  <?php $file = $exhibit->getFile();?>
+    <?php if ($file): ?>
+      <div class="carousel-item <?php if($i == 0){ echo "active";} ?>">
+        <img class="<?php if($i == 0){ echo "first-slide";} ?>" src="<?php echo $file->getWebPath(); ?>">
+        <div class="carousel-caption">
+          <H3><span>In de kijker</span></h3>
+          <h1><?php echo exhibit_builder_link_to_exhibit($exhibit); ?></h1>
+          <p><?php echo snippet_by_word_count(metadata($exhibit, 'description', array('no_escape' => true))); ?></p>
+          <p class="caption-auteur">Door: <strong>Tester</strong></p>
+        </div>
+      </div>
+      <?php $i++; ?>
+    <?php endif; ?>
+  <?php endforeach;
+}

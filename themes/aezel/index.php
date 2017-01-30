@@ -7,29 +7,12 @@
                     <div class="carousel-wrap">
                         <div data-ride="carousel" class="carousel slide" id="myCarousel">
                           <!-- Indicators -->
-                          <ol class="carousel-indicators">
+                          <!--<ol class="carousel-indicators">
                             <li class="" data-slide-to="0" data-target="#myCarousel"></li>
                             <li data-slide-to="1" data-target="#myCarousel" class="active"></li>
-                          </ol>
+                          </ol>-->
                           <div role="listbox" class="carousel-inner">
-                              <div class="carousel-item">
-                                <img alt="First slide" src="<?php echo img('bg6.png');?>" class="first-slide">
-                                <div class="carousel-caption">
-                                  <H3><span>In de kijker</span></h3>
-                                  <h1>Titel volgend verhaal</h1>
-                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                  <p class="caption-auteur">Door: <strong>Tester</strong></p>
-                                </div>
-                            </div>
-                            <div class="carousel-item active">
-                              <img alt="Third slide" src="<?php echo img('bg5.jpg');?>" class="third-slide">
-                                <div class="carousel-caption">
-                                   <H3><span>In de kijker</span></h3>
-                                  <h1>Titel verhaal</h1>
-                                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                  <p class="caption-auteur">Door: <strong>Tester2</strong></p>
-                                </div>
-                            </div>
+                              <?php echo libis_get_featured_exhibits();?>
                           </div>
                         </div>
                     </div>
