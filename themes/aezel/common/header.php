@@ -54,9 +54,9 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <?php echo public_nav_main_bootstrap(); ?>
-            <form class="form-inline pull-xs-right" role="search">
+            <form class="form-inline pull-xs-right" role="search" action="<?php echo url('solr-search/results/')?>" method="GET">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search" value="" name="solrq">
                 </div>
                 <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
                 </button>

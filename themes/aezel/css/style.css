@@ -6553,6 +6553,10 @@ hr {
   margin-bottom: 0.5em;
 }
 
+.jumbotron .kijker #right .well h1 a {
+  color: #333;
+}
+
 .jumbotron .kijker #right .well p {
   font-weight: 200;
   min-height: 0;

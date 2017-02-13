@@ -138,13 +138,16 @@
                 <?php endif; ?>
 
                 <?php
-                  $item = get_db()->getTable($doc->model)->find($doc->modelid);
-                  echo link_to_item(
-                      item_image('square_thumbnail', array('alt' => $doc->title), 0, $item),
-                      array(),
-                      'show',
-                      $item
-                  );
+                  if ($doc->resulttype == 'Item') :
+                    $item = get_db()->getTable($doc->model)->find($doc->modelid);
+                    echo link_to_item(
+                        item_image('square_thumbnail', array('alt' => $doc->title), 0, $item),
+                        array(),
+                        'show',
+                        $item
+                    );
+                  endif;
+                
                   /*echo item_image_gallery(
                       array('wrapper' => array('class' => 'gallery')),
                       'square_thumbnail',
