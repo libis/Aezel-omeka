@@ -643,7 +643,7 @@ hr {
     input[type="submit"]{
       background: rgba($brand-primary,1);
       text-transform: uppercase;
-      font-family: $font-family-serif;
+      font-family: $font-family-sans-serif;
       color:white;
       border:none;
       padding:0 9px;
@@ -669,9 +669,17 @@ hr {
   }
 
   .result{
-    padding:1rem;
-    background: rgba($bg,0.8);
+    padding:2rem;
+    background: rgba($gray,0.05);
     border-bottom:2px solid #fff;
+
+    .col-img{
+      padding:0;
+    }
+
+    img{
+      width:100%;
+    }
 
     .result-title{
       font-size:1.2rem;

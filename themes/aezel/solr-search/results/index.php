@@ -102,16 +102,33 @@
             <?php foreach ($results->response->docs as $doc) : ?>
 
               <!-- Document. -->
-              <div class="result">
+              <div class="row result">
+                <?php if ($doc->resulttype == 'Item') :
+
+                    $item = get_db()->getTable($doc->model)->find($doc->modelid);
+                    if (metadata($item, 'has files')) :?>
+                          <div class="col-md-3 col-img">
+                      <?php
+                      echo link_to_item(
+                          item_image('square_thumbnail', array('alt' => $doc->title), 0, $item),
+                          array(),
+                          'show',
+                          $item
+                      );
+                      ?>
+                      </div>
+
+                      <?php endif; ?>
+                    <?php endif;?>
 
                 <!-- Header. -->
-                <div class="result-header">
+                <div class="col-md-9">
 
                     <!-- Record URL. -->
                     <?php $url = SolrSearch_Helpers_View::getDocumentUrl($doc); ?>
 
                     <!-- Title. -->
-                    <a href="<?php echo $url; ?>" class="result-title">
+                    <h2><a href="<?php echo $url; ?>" class="result-title">
                     <?php
                     $title = is_array($doc->title) ? $doc->title[0] : $doc->title;
                     if (empty($title)) {
@@ -119,42 +136,21 @@
                     }
                     echo $title;
                     ?>
-                    </a>
+                    </a></h2>
+
+                    <?php
+                        if ($doc->resulttype == 'Item') :
+                          $item = get_db()->getTable($doc->model)->find($doc->modelid);
+                          if($text = metadata($item, array('Dublin Core','Description'),array('snippet'=>'150'))):
+                            echo $text;
+                          endif;
+                        endif;
+                    ?>
 
                     <!-- Result type.
                     <span class="result-type">(<?php echo $doc->resulttype; ?>)</span> -->
 
                 </div>
-
-                <!-- Highlighting. -->
-                <?php if (get_option('solr_search_hl')) : ?>
-                  <ul class="hl">
-                    <?php foreach ($results->highlighting->{$doc->id} as $field) : ?>
-                        <?php foreach ($field as $hl) : ?>
-                            <li class="snippet"><?php echo strip_tags($hl, '<em>'); ?></li>
-                        <?php endforeach; ?>
-                    <?php endforeach; ?>
-                  </ul>
-                <?php endif; ?>
-
-                <?php
-                  if ($doc->resulttype == 'Item') :
-                    $item = get_db()->getTable($doc->model)->find($doc->modelid);
-                    echo link_to_item(
-                        item_image('square_thumbnail', array('alt' => $doc->title), 0, $item),
-                        array(),
-                        'show',
-                        $item
-                    );
-                  endif;
-                
-                  /*echo item_image_gallery(
-                      array('wrapper' => array('class' => 'gallery')),
-                      'square_thumbnail',
-                      false,
-                      $item
-                  );*/
-                ?>
               </div>
 
             <?php endforeach; ?>
