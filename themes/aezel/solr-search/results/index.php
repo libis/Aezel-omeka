@@ -16,13 +16,10 @@
     <!-- Search form. -->
     <div class="solr">
       <form id="solr-search-form">
-
-        <span class="float-wrap">
           <input type="text" title="<?php echo __('Search keywords') ?>" name="q" value="<?php
             echo array_key_exists('q', $_GET) ? $_GET['q'] : '';
             ?>"
           />
-        </span>
         <input type="submit" value="zoek" />
       </form>
     </div>

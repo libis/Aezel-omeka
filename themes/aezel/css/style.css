@@ -6831,10 +6831,19 @@ hr {
 .container .content {
   padding: 3em;
   background: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.1rem;
 }
 
 .container .content h1 {
-  font-size: 2.5em;
+  font-size: 2em;
+  text-transform: none;
+  font-family: "Lato", sans-serif;
+}
+
+.container .content h2, .container .content h3, .container .content h4, .container .content h5 {
+  text-transform: none;
+  font-family: "Lato", sans-serif;
 }
 
 .container .simple-nav {
@@ -6844,7 +6853,6 @@ hr {
   list-style: none;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
-  font-weight: bold;
   border-left: 3px solid #e8393a;
 }
 
@@ -6928,7 +6936,7 @@ hr {
 .solr-container #solr-search-form input[type="submit"] {
   background: #e8393a;
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
+  font-family: sans-serif;
   color: white;
   border: none;
   padding: 0 9px;
@@ -6943,6 +6951,7 @@ hr {
   height: 2.2rem;
   min-width: 250px;
   border-radius: 2px;
+  font-family: sans-serif;
 }
 
 .solr-container h2 {

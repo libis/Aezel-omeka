@@ -532,9 +532,18 @@ hr {
     .content {
         padding: 3em;
         background: #fff;
+        font-family: $font-family-serif;
+        font-size:1.1rem;
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
+            text-transform: none;
+            font-family: $font-family-sans-serif;
+        }
+
+        h2,h3,h4,h5{
+          text-transform: none;
+          font-family: $font-family-sans-serif;
         }
     }
 
@@ -545,7 +554,6 @@ hr {
         list-style: none;
         font-family: $font-family-serif;
         font-style: italic;
-        font-weight: bold;
         border-left: 3px solid $brand-primary;
 
         li {
@@ -643,7 +651,7 @@ hr {
     input[type="submit"]{
       background: rgba($brand-primary,1);
       text-transform: uppercase;
-      font-family: $font-family-sans-serif;
+      font-family: sans-serif;
       color:white;
       border:none;
       padding:0 9px;
@@ -658,6 +666,7 @@ hr {
       height:2.2rem;
       min-width:250px;
       border-radius: 2px;
+      font-family: sans-serif;
     }
   }
 
