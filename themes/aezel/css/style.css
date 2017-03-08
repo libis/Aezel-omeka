@@ -6844,6 +6844,11 @@ hr {
 .container .content h2, .container .content h3, .container .content h4, .container .content h5 {
   text-transform: none;
   font-family: "Lato", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.container .content address {
+  font-style: italic;
 }
 
 .container .simple-nav {
