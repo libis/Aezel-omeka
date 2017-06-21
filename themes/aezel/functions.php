@@ -32,8 +32,15 @@ function get_color()
       "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
       "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
       "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
-      "10" => array("kleur" => "oranje", "logo" => "clock_logo")
+      "10" => array("kleur" => "oranje", "logo" => "clock_logo"),
+      "12" => array("kleur" => "bruin", "logo" => "donkey_logo")
     );
+
+    if (strpos(current_url(), '/users/') !== false ||
+        strpos(current_url(), '/guest-user/') !== false
+      ) {
+      return $colors['12'];
+  }
 
     //get current page
     $current_page = get_current_record('simple_pages_page', false);

@@ -1,0 +1,63 @@
+hr {
+  border-top: 1px solid #764D2D;
+}
+
+a, a:hover{
+  color: #764D2D;
+}
+
+/* NAVBAR */
+.navbar-default {
+  background: #764D2D;
+}
+
+.navbar-default .navbar-nav .dropdown-menu {
+  background: #764D2D;
+}
+
+.navbar-default .btn-default {
+  background: #764D2D;
+}
+
+.navbar-default .navbar-toggle {
+  background: #764D2D;
+}
+
+.container .nieuws h3 {
+  border-bottom: 1px solid rgba(55, 117, 187, 0.4);
+}
+
+.container .simple-nav {
+  border-left: 3px solid #764D2D;
+}
+
+.container .simple-nav li {
+  border-bottom: 1px solid #3A260F;
+}
+
+.exhibits #content .nav {
+  border-left: 3px solid #764D2D;
+}
+
+
+.exhibits #content .nav li {
+  border-bottom: 1px solid #3A260F;
+}
+
+footer .dropdown-menu li > a {
+  color: #764D2D;
+}
+
+
+
+.login #submit,.register #submit{
+        background:#764D2D;
+        border-bottom:2px solid #3A260F;
+        border-right:2px solid #3A260F;
+}
+
+.login #submit:hover,.register #submit:hover{
+        background:#3A260F;
+    }
+}
+/*# sourceMappingURL=style.css.map */

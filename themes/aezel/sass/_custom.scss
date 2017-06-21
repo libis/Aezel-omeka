@@ -765,6 +765,41 @@ hr {
     display: block;
 }
 
+.register, .login, .update-account{
+    .field{
+        margin-bottom:1.5rem;
+
+        label{
+            font-weight:500;
+            font-family: $font-family-sans-serif;
+        }
+
+        .explanation{
+            font-size: 0.9rem;
+            color: rgba($gray-dark,0.6);
+        }
+
+        input{
+            border:1px solid rgba($gray-dark,0.2);
+            padding:0.3rem 0.8rem;
+        }
+    }
+    #submit{
+        background:$brand-primary;
+        font-family: $font-family-sans-serif;
+        color:white;
+        border:none;
+        border-radius: 5px;
+        padding:0.3rem 0.5rem;
+        border-bottom:2px solid $rood-donker;
+        border-right:2px solid $rood-donker;
+    }
+
+    #submit:hover{
+        background:$rood-donker;
+    }
+}
+
 footer {
     font-family: $font-family-serif;
     font-style: italic;

@@ -7043,6 +7043,40 @@ hr {
   display: block;
 }
 
+.register .field, .login .field, .update-account .field {
+  margin-bottom: 1.5rem;
+}
+
+.register .field label, .login .field label, .update-account .field label {
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+
+.register .field .explanation, .login .field .explanation, .update-account .field .explanation {
+  font-size: 0.9rem;
+  color: rgba(51, 51, 51, 0.6);
+}
+
+.register .field input, .login .field input, .update-account .field input {
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  padding: 0.3rem 0.8rem;
+}
+
+.register #submit, .login #submit, .update-account #submit {
+  background: #e8393a;
+  font-family: "Lato", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid #AB2222;
+  border-right: 2px solid #AB2222;
+}
+
+.register #submit:hover, .login #submit:hover, .update-account #submit:hover {
+  background: #AB2222;
+}
+
 footer {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
