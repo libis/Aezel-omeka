@@ -20,8 +20,10 @@
 
       <div class="col-md-8">
         <?php if (metadata('item', 'Item Type Name') !== 'Nieuws') : ?>
-
             <?php echo all_element_texts('item', array("show_element_set_headings"=>false)); ?>
+            <?php if($text = metadata('item', array('Dublin Core', 'References'))):?>
+                <p><a class="bekijk-online" href="<?php echo $text; ?>">Bekijk online</a></p>
+            <?php endif;?>
         <?php else : ?>
             <div class="date"><?php echo metadata('item', array('Dublin Core', 'Date')); ?></div>
             <div class="description"><?php echo metadata('item', array('Dublin Core', 'Description')); ?></div>
