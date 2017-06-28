@@ -20,6 +20,37 @@ function simple_nav()
     foreach ($links as $link) :
         $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
     endforeach;
+
+    /*
+    "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
+    "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
+    "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
+    "10" => array("kleur" => "oranje", "logo" => "clock_logo"),
+    */
+
+    switch ($page->id) {
+        case "8":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Erfgoed+website"');
+            $namex = "Websites Erfgoed";
+            break;
+        case "9":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Kaart"');
+            $namex = "Landkaart";
+            break;
+        case "7":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Stamboom"');
+            $namex = "Stamboom";
+            break;
+        case "10":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Kaart+historie"');
+            $namex = "Kaart historie";
+            break;
+        default:
+            $linkx = false;
+            $namex = false;
+    }
+
+    $html .= "<li><a href='".$linkx."'>".$namex."</a></li>";
     $html .="</ul>";
 
     return $html;
