@@ -39,6 +39,10 @@ hr {
     background: $brand-primary;
     padding-top:0;
 
+    .container{
+      padding:0;
+    }
+
     .brand-row {
         border-bottom: 1px dotted white;
     }
@@ -64,6 +68,12 @@ hr {
         }
     }
 
+    #navbarSupportedContent{
+      @include media-breakpoint-down(md) {
+        width:100%;
+      }
+    }
+
     .navbar-nav {
         width:auto;
         line-height: 60px;
@@ -71,6 +81,13 @@ hr {
         li {
             margin-right: 20px;
             width:auto;
+            list-style: none;
+
+            @include media-breakpoint-down(md) {
+                line-height: 30px;
+                text-align: center;
+                border-bottom:1px solid darken($brand-primary,5%);
+            }
         }
 
         li.active {}
@@ -92,30 +109,51 @@ hr {
             font-size: 0.9em;
             padding: 10px;
             line-height: 20px;
-            top:95%;
+            margin-top:-15px;
         }
 
-        .dropdown-menu li a {
-            color: #fff;
+        .dropdown-menu li{
+            margin-bottom:5px;
+
+            a {
+              color: #fff;
+            }
         }
 
         .dropdown-menu li a:hover {
             background: none;
         }
+
+        .dropdown-toggle::after{
+            @include media-breakpoint-down(md) {
+                content:none;
+            }
+        }
     }
 
     .form-inline {
         border: none;
-        margin-right: 15px;
-        margin-left: 20px;
-        line-height: 55px;
-        padding: 0;
+        padding:0.9rem 0;
         background: transparent;
 
+        .btn-default {
+            color: #fff;
+            border: none;
+            background: none;
+        }
+
         input {
+            border: none;
+            color: $gray-dark;
+            background: #fff;
+            box-shadow: none;
             border: 0;
             height: auto;
             border-radius: 2px;
+        }
+
+        input:focus {
+            box-shadow: none;
         }
 
         .form-control::-moz-placeholder {
@@ -123,31 +161,14 @@ hr {
         }
     }
 
-    .btn-default {
-        color: #fff;
-        border: none;
+    .navbar-toggler {
         background: $brand-primary;
-        border-radius: 2px;
-        font-size: 1.0em;
-        height: 36px;
-        padding-left: 10px;
-    }
-
-    input {
-        border: none;
-        color: $gray-dark;
-        background: #fff;
-        box-shadow: none;
-    }
-
-    input:focus {
-        box-shadow: none;
-    }
-
-    .navbar-toggle {
-        background: $brand-primary;
+        color:#fff;
+        height:60px;
+        font-size: 1.2rem;
     }
 }
+
 
 .jumbotron {
     background: transparent;

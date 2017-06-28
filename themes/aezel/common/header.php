@@ -24,12 +24,10 @@
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <!-- Stylesheets -->
     <?php
     queue_css_file(array('iconfonts','style.min',$style["kleur"]));
-    queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css();
 
     echo theme_header_background();
@@ -46,20 +44,28 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
 
-    <nav class="navbar navbar-default ">
+    <nav class="navbar navbar-toggleable-md navbar-default ">
         <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <button class="navbar-toggler pull-xs-right navbar-text hidden-lg-up navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              &#9776;
+            </button>
             <?php echo link_to_home_page("<img src='".img("/logos/".$style["logo"].".png")."'>".option('site_title'), array('class'=>'navbar-brand')); ?>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <?php echo public_nav_main_bootstrap(); ?>
-            <form class="form-inline pull-xs-right" role="search" action="<?php echo url('solr-search/')?>" method="GET">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" value="" name="q">
+            <div class="navbar-collapse pull-xs-left navbar-toggleable-md collapse" id="navbarSupportedContent">
+                <?php echo public_nav_main_bootstrap(); ?>
+            </div>
+
+            <form class="form-inline pull-sm-right navbar-toggleable-md collapse" role="search" action="<?php echo url('solr-search/')?>" method="GET">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Zoek" value="" name="q">
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </span>
                 </div>
-                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
-                </button>
             </form>
+
       </div><!-- /.container-fluid -->
     </nav>

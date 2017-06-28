@@ -6343,6 +6343,10 @@ hr {
   padding-top: 0;
 }
 
+.navbar-default .container {
+  padding: 0;
+}
+
 .navbar-default .brand-row {
   border-bottom: 1px dotted white;
 }
@@ -6368,6 +6372,12 @@ hr {
   vertical-align: text-bottom;
 }
 
+@media (max-width: 991px) {
+  .navbar-default #navbarSupportedContent {
+    width: 100%;
+  }
+}
+
 .navbar-default .navbar-nav {
   width: auto;
   line-height: 60px;
@@ -6376,6 +6386,15 @@ hr {
 .navbar-default .navbar-nav li {
   margin-right: 20px;
   width: auto;
+  list-style: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-default .navbar-nav li {
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #e52223;
+  }
 }
 
 .navbar-default .navbar-nav li a {
@@ -6395,7 +6414,11 @@ hr {
   font-size: 0.9em;
   padding: 10px;
   line-height: 20px;
-  top: 95%;
+  margin-top: -15px;
+}
+
+.navbar-default .navbar-nav .dropdown-menu li {
+  margin-bottom: 5px;
 }
 
 .navbar-default .navbar-nav .dropdown-menu li a {
@@ -6406,48 +6429,47 @@ hr {
   background: none;
 }
 
+@media (max-width: 991px) {
+  .navbar-default .navbar-nav .dropdown-toggle::after {
+    content: none;
+  }
+}
+
 .navbar-default .form-inline {
   border: none;
-  margin-right: 15px;
-  margin-left: 20px;
-  line-height: 55px;
-  padding: 0;
+  padding: 0.9rem 0;
   background: transparent;
 }
 
+.navbar-default .form-inline .btn-default {
+  color: #fff;
+  border: none;
+  background: none;
+}
+
 .navbar-default .form-inline input {
+  border: none;
+  color: #333;
+  background: #fff;
+  box-shadow: none;
   border: 0;
   height: auto;
   border-radius: 2px;
+}
+
+.navbar-default .form-inline input:focus {
+  box-shadow: none;
 }
 
 .navbar-default .form-inline .form-control::-moz-placeholder {
   color: #666;
 }
 
-.navbar-default .btn-default {
+.navbar-default .navbar-toggler {
+  background: #e8393a;
   color: #fff;
-  border: none;
-  background: #e8393a;
-  border-radius: 2px;
-  font-size: 1.0em;
-  height: 36px;
-  padding-left: 10px;
-}
-
-.navbar-default input {
-  border: none;
-  color: #333;
-  background: #fff;
-  box-shadow: none;
-}
-
-.navbar-default input:focus {
-  box-shadow: none;
-}
-
-.navbar-default .navbar-toggle {
-  background: #e8393a;
+  height: 60px;
+  font-size: 1.2rem;
 }
 
 .jumbotron {

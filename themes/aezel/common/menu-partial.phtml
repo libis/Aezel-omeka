@@ -1,4 +1,4 @@
-<ul class="nav navbar-nav">
+<ul class="navbar-nav mr-auto">
     <?php $count = 0 ?>
     <?php foreach ($this->container as $page): ?>
         <?php if( ! $page->isVisible() || !$this->navigation()->accept($page)) continue; ?>
@@ -13,10 +13,10 @@
             <li class="nav-item dropdown <?php if($page->isActive()) echo 'active'; ?>" role="presentation">
                 <a class="dropdown-toggle" href="<?php echo $page->getHref() ?>" role="button" aria-haspopup="true" aria-expanded="false">
                     <?php echo $this->translate($page->getLabel()) ?>
-                    <span class="caret"></span>
+                    <span class="caret hidden-sm-down"></span>
                 </a>
 
-                <ul class="dropdown-menu" id="page_<?php echo $count ?>">
+                <ul class="dropdown-menu hidden-sm-down" id="page_<?php echo $count ?>">
                     <?php foreach($page->getPages() as $child): ?>
                         <?php if( ! $child->isVisible() || !$this->navigation()->accept($child)) continue; ?>
                         <li <?php if($child->isActive()) echo 'class="active"'?>>
@@ -26,7 +26,7 @@
                         </li>
                     <?php endforeach ?>
                 </ul>
-            </li>   
+            </li>
         <?php endif; ?>
         <?php $count++ ?>
     <?php endforeach; ?>
