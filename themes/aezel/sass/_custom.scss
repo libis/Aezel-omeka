@@ -849,12 +849,21 @@ hr {
       font-size: 1.1rem;
       font-family: $font-family-sans-serif;
     }
+
+    .element-text{
+        margin-left: 200px;
+        margin-bottom: 15px;
+    }
   }
 
   .item-pagination{
     list-style:none;
     margin:30px 0 0 0;
     padding:0;
+
+    .previous{
+        display:inline;
+    }
 
     .next{
       float:right;

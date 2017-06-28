@@ -15,9 +15,7 @@
 
     <div class="row">
       <?php if (metadata('item', 'has files')) : ?>
-        <div class="col-md-4">
-          <div class="element-text"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
-        </div>
+        <div class="col-md-4"><?php echo files_for_item(array('imageSize' => 'fullsize')); ?></div>
       <?php endif; ?>
 
       <div class="col-md-8">
@@ -36,12 +34,6 @@
             <div class="element-text"><?php echo tag_string('item'); ?></div>
         </div>
         <?php endif;?>
-
-        <!-- The following prints a citation for this item. -->
-        <!--<div id="item-citation" class="element">
-            <h3><?php echo __('Citation'); ?></h3>
-            <div class="element-text"><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></div>
-        </div>-->
 
         <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
       </div>

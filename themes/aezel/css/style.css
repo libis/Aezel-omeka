@@ -7132,10 +7132,19 @@ hr {
   font-family: "Lato", sans-serif;
 }
 
+.item .element .element-text {
+  margin-left: 200px;
+  margin-bottom: 15px;
+}
+
 .item .item-pagination {
   list-style: none;
   margin: 30px 0 0 0;
   padding: 0;
+}
+
+.item .item-pagination .previous {
+  display: inline;
 }
 
 .item .item-pagination .next {
