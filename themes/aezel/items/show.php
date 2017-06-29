@@ -20,9 +20,19 @@
 
       <div class="col-md-8">
         <?php if (metadata('item', 'Item Type Name') !== 'Nieuws') : ?>
-            <?php echo all_element_texts('item', array("show_element_set_headings"=>false)); ?>
-            <?php if($text = metadata('item', array('Dublin Core', 'References'))):?>
-                <p><a class="bekijk-online" href="<?php echo $text; ?>">Bekijk online</a></p>
+            <?php
+                $meta = all_element_texts('item', array("show_element_set_headings"=>false,"return_type" => "array"));
+                $meta = call_user_func_array('array_merge', $meta);
+                foreach ($meta as $name=>$text):?>
+                  <?php if($name != "References"):?>
+                      <div id="dublin-core-title" class="element">
+                          <h3><?php echo $name; ?></h3>
+                          <div class="element-text"><?php echo implode(",",$text); ?></div>
+                      </div>
+                  <?php endif;?>
+            <?php endforeach;?>
+            <?php if($meta['References']):?>
+                <p><a class="bekijk-online" href="<?php echo $meta['References'][0]; ?>">Bekijk online</a></p>
             <?php endif;?>
         <?php else : ?>
             <div class="date"><?php echo metadata('item', array('Dublin Core', 'Date')); ?></div>
