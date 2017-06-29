@@ -77,7 +77,8 @@ function get_color()
     $current_page = get_current_record('simple_pages_page', false);
 
     if (!$current_page) :
-        if($_GET['facet']):
+        $facet="";
+        if(isset($_GET['facet'])):
           $facet = $_GET['facet'];
         endif;
 
