@@ -7,7 +7,7 @@ a, a:hover{
 }
 
 /* NAVBAR */
-.navbar-default {  
+.navbar-default {
   background: #41a949;
 }
 
@@ -32,7 +32,7 @@ a, a:hover{
 }
 
 .container .simple-nav li {
-  border-bottom: 1px solid #7fa9d9;
+  border-bottom: 1px solid #41a949;
 }
 
 .exhibits #content .nav {
@@ -41,7 +41,15 @@ a, a:hover{
 
 
 .exhibits #content .nav li {
-  border-bottom: 1px solid #7fa9d9;
+  border-bottom: 1px solid #41a949;
+}
+
+.solr-container #solr-applied-facets ul li, .solr-container #solr-search-form button[type="submit"]{
+  background:#41a949;
+}
+
+.solr-container #solr-search-form input[type="text"] {
+    border: 1px solid #41a949;
 }
 
 footer .dropdown-menu li > a {

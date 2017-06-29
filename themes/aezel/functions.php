@@ -71,12 +71,30 @@ function get_color()
         strpos(current_url(), '/guest-user/') !== false
       ) {
       return $colors['12'];
-  }
+    }
 
     //get current page
     $current_page = get_current_record('simple_pages_page', false);
 
     if (!$current_page) :
+        if($_GET['facet']):
+          $facet = $_GET['facet'];
+        endif;
+
+        switch ($facet) {
+            case 'itemtype:"Stamboom"':
+                return $colors['7'];
+                break;
+            case 'itemtype:"Kaart"':
+                return $colors['9'];
+                break;
+            case 'itemtype:"Kaart+historie"':
+                return $colors['10'];
+                break;
+            default:
+                return $colors['8'];
+        }
+
         return $colors['8'];
     endif;
 

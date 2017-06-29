@@ -24,7 +24,7 @@
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
+    
     <!-- Stylesheets -->
     <?php
     queue_css_file(array('iconfonts','style.min',$style["kleur"]));
