@@ -31,7 +31,7 @@
                       </div>
                   <?php endif;?>
             <?php endforeach;?>
-            <?php if($meta['References']):?>
+            <?php if(isset($meta['References'])):?>
                 <p><a class="bekijk-online" href="<?php echo $meta['References'][0]; ?>">Bekijk online</a></p>
             <?php endif;?>
         <?php else : ?>

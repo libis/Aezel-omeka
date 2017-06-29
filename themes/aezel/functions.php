@@ -75,20 +75,28 @@ function get_color()
 
     //get current page
     $current_page = get_current_record('simple_pages_page', false);
+    $current_item = get_current_record('item', false);
 
     if (!$current_page) :
-        $facet="";
+        $type="";
         if(isset($_GET['facet'])):
-          $facet = $_GET['facet'];
+          $type = $_GET['facet'];
         endif;
 
-        switch ($facet) {
+        if($current_item):
+            $type = metadata('item', 'Item Type Name');
+        endif;
+
+        switch ($type) {
+            case 'Stamboom':
             case 'itemtype:"Stamboom"':
                 return $colors['7'];
                 break;
+            case 'Kaart':
             case 'itemtype:"Kaart"':
                 return $colors['9'];
                 break;
+            case 'Kaart Historie':
             case 'itemtype:"Kaart+historie"':
                 return $colors['10'];
                 break;
