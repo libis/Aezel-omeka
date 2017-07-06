@@ -18,12 +18,20 @@ class GuestUser_ControllerPlugin extends Zend_Controller_Plugin_Abstract
         $user = current_user();
         $allowAccess = false;
         $path = $request->getPathInfo();
-        if (0 === strpos($path, '/vrijwilligers')) {
+
+        if($page = get_current_record('simple-pages-page',false)):
+          $parents = $page->getAncestors();
+          if($parents):
+            var_dump($parents);
+          endif;
+        endif;
+
+        /*if (0 === strpos($path, '/vrijwilligers')) {
           // prevent access to site for anyone not logged in, including guests.
           if (!$user && !$allowAccess){
             $this->_getRedirect()->gotoUrl(WEB_ROOT .'/users/login');
           }
-        }
+        }*/
     }
 
     protected function _preventAdminAccess($request)
