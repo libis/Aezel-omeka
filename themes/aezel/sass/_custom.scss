@@ -149,7 +149,7 @@ hr {
             box-shadow: none;
             border: 0;
             height: auto;
-            border-radius: 2px;
+            border-radius: 2px !important;
         }
 
         input:focus {
@@ -206,6 +206,7 @@ hr {
         h3 {
             margin: 0;
             text-align: left;
+            color:rgba($gray-dark,0.8);
 
             span {
                 border: none;
@@ -267,7 +268,6 @@ hr {
 
                 h1 {
                     font-size: 2em;
-                    font-family: $font-family-serif;
                     margin-bottom: 0.5em;
 
                     a{
@@ -278,7 +278,6 @@ hr {
                 p {
                     font-weight: 200;
                     min-height: 0;
-                    font-family: $font-family-sans-serif;
                     font-weight: 400;
                 }
 

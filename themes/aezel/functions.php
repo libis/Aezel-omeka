@@ -15,6 +15,13 @@ function simple_nav()
     if (!$links) :
         $links = simple_pages_get_links_for_children_pages($page->parent_id);
     endif;
+    
+    if($page->title == 'Vrijwilligers' && !current_user()):
+      $html="<ul class='simple-nav'>";
+      $html .= "<li><a href='".url('/guest-user/user/login')."'>Inloggen</a></li>";
+      $html .= "<li><a href='".url('/guest-user/user/register')."'>Registreren</a></li></ul>";
+      return $html;
+    endif;
 
     $html="<ul class='simple-nav'>";
     foreach ($links as $link) :
