@@ -391,7 +391,7 @@ hr {
                 border-bottom: 2px solid rgba($groen-donker,0.8);
                 color: $groen-donker;
 
-                .lees-meer a {
+                .lees-meer span {
                     background: $groen-donker;
                     color: #fff;
                 }
@@ -401,7 +401,7 @@ hr {
                 border-bottom: 2px solid rgba($rood-donker,0.8);
                 color: $rood-donker;
 
-                .lees-meer a {
+                .lees-meer span {
                     background: $rood-donker;
                     color: #fff;
                 }
@@ -411,7 +411,7 @@ hr {
                 border-bottom: 2px solid rgba($blauw-donker,0.8);
                 color: $blauw-donker;
 
-                .lees-meer a {
+                .lees-meer span {
                     background: $blauw-donker;
                     color: #fff;
                 }
@@ -421,7 +421,7 @@ hr {
                 border-bottom: 2px solid rgba($oranje-donker,0.8);
                 color: $oranje-donker;
 
-                .lees-meer a {
+                .lees-meer span {
                     background: $oranje-donker;
                     color: #fff;
                 }
@@ -477,7 +477,7 @@ hr {
                 text-align: right;
             }
 
-            .lees-meer a {
+            .lees-meer span {
                 background: white;
                 font-family: $font-family-sans-serif;
                 padding: 5px 10px;

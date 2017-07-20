@@ -6692,7 +6692,7 @@ hr {
   color: #0E763D;
 }
 
-.container .icons .icon-block .wie .lees-meer a {
+.container .icons .icon-block .wie .lees-meer span {
   background: #0E763D;
   color: #fff;
 }
@@ -6702,7 +6702,7 @@ hr {
   color: #AB2222;
 }
 
-.container .icons .icon-block .wat .lees-meer a {
+.container .icons .icon-block .wat .lees-meer span {
   background: #AB2222;
   color: #fff;
 }
@@ -6712,7 +6712,7 @@ hr {
   color: #125AAA;
 }
 
-.container .icons .icon-block .waar .lees-meer a {
+.container .icons .icon-block .waar .lees-meer span {
   background: #125AAA;
   color: #fff;
 }
@@ -6722,7 +6722,7 @@ hr {
   color: #EE7316;
 }
 
-.container .icons .icon-block .wanneer .lees-meer a {
+.container .icons .icon-block .wanneer .lees-meer span {
   background: #EE7316;
   color: #fff;
 }
@@ -6778,7 +6778,7 @@ hr {
   text-align: right;
 }
 
-.container .icons .icon-block .lees-meer a {
+.container .icons .icon-block .lees-meer span {
   background: white;
   font-family: "Lato", sans-serif;
   padding: 5px 10px;
