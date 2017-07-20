@@ -69,7 +69,7 @@ function get_color()
       "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
       "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
       "10" => array("kleur" => "oranje", "logo" => "clock_logo"),
-      "12" => array("kleur" => "bruin", "logo" => "donkey_logo")
+      "54" => array("kleur" => "bruin", "logo" => "donkey_logo")
     );
 
     if (strpos(current_url(), '/users/') !== false ||
