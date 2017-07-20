@@ -89,7 +89,7 @@
                   <?php
                     echo libis_get_news();
                   ?>
-                  <p class="meer-nieuws"><a href="">Meer nieuws</a></p>
+                  <p class="meer-nieuws"><a href='<?php echo url('/solr-search?q=&facet=itemtype:"Nieuws"');?>'>Meer nieuws</a></p>
             </section>
         </div>
     </div>
