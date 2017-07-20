@@ -6381,7 +6381,6 @@ hr {
 .navbar-default .navbar-nav {
   width: auto;
   line-height: 60px;
-  overflow: auto;
   margin-bottom: 0;
   padding-left: 5px;
 }

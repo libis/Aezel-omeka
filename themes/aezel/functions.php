@@ -75,7 +75,7 @@ function get_color()
     if (strpos(current_url(), '/users/') !== false ||
         strpos(current_url(), '/guest-user/') !== false
       ) {
-      return $colors['12'];
+      return $colors['54'];
     }
 
     //get current page
@@ -83,9 +83,16 @@ function get_color()
     $current_item = get_current_record('item', false);
 
     if (!$current_page) :
-        $type="";
+        $color_facet="";$type="";
         if(isset($_GET['facet'])):
-          $type = $_GET['facet'];
+          $possible_facets= array('Stamboom', 'Kaart', 'Kaart historie');
+          $current_facets = $_GET['facet'];
+
+          foreach ($possible_facets as $possible_facet) {
+              if (strpos($current_facets,$possible_facet) !== FALSE) {
+                  $type = $possible_facet;
+              }
+          }
         endif;
 
         if($current_item):
@@ -94,15 +101,12 @@ function get_color()
 
         switch ($type) {
             case 'Stamboom':
-            case 'itemtype:"Stamboom"':
                 return $colors['7'];
                 break;
             case 'Kaart':
-            case 'itemtype:"Kaart"':
                 return $colors['9'];
                 break;
             case 'Kaart Historie':
-            case 'itemtype:"Kaart historie"':
                 return $colors['10'];
                 break;
             default:

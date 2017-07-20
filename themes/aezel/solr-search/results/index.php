@@ -23,6 +23,8 @@
                   echo array_key_exists('q', $_GET) ? $_GET['q'] : '';
                   ?>"
                 />
+                <input type="hidden" name="facet" value='<?php
+                  echo array_key_exists('facet', $_GET) ? $_GET['facet'] : '';?>'/>
                 <span class="input-group-btn">
                      <button class="btn btn-default" type="submit">zoek</button>
                 </span>
