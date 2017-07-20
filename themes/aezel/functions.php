@@ -24,9 +24,6 @@ function simple_nav()
     endif;
 
     $html="<ul class='simple-nav'>";
-    foreach ($links as $link) :
-        $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
-    endforeach;
 
     /*
     "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
@@ -38,26 +35,27 @@ function simple_nav()
     switch ($page->id) {
         case "8":
             $linkx = url('/solr-search?q=&facet=itemtype:"Erfgoed+website"');
-            $namex = "Websites Erfgoed";
             break;
         case "9":
             $linkx = url('/solr-search?q=&facet=itemtype:"Kaart"');
-            $namex = "Landkaart";
             break;
         case "7":
             $linkx = url('/solr-search?q=&facet=itemtype:"Stamboom"');
-            $namex = "Stamboom";
             break;
         case "10":
             $linkx = url('/solr-search?q=&facet=itemtype:"Kaart+historie"');
-            $namex = "Kaart historie";
             break;
         default:
             $linkx = false;
             $namex = false;
     }
 
-    $html .= "<li><a href='".$linkx."'>".$namex."</a></li>";
+    $html .= "<li><a href='".$linkx."'>Onze Collectie</a></li>";
+
+    foreach ($links as $link) :
+        $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
+    endforeach;
+
     $html .="</ul>";
 
     return $html;
