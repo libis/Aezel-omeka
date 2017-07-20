@@ -6475,7 +6475,7 @@ hr {
 
 .jumbotron {
   background: transparent;
-  padding: 3rem 0;
+  padding: 2rem 0;
   margin-bottom: 0;
   border-radius: 0;
 }
@@ -6594,12 +6594,12 @@ hr {
 }
 
 .content-wrapper {
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .section-icons {
   background: #f7f7f7;
-  padding-bottom: 25px;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #ededed;
   border-top: 1px solid #fff;
 }
@@ -6659,7 +6659,7 @@ hr {
   font-size: 2em;
   font-style: normal;
   text-transform: none;
-  padding: 10px 0 20px;
+  padding: 0 0 20px;
   text-align: center;
 }
 
