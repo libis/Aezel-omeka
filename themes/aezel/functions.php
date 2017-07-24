@@ -18,19 +18,13 @@ function simple_nav()
 
     if($page->title == 'Vrijwilligers' && !current_user()):
       $html="<ul class='simple-nav'>";
+      $html .= "<li><a href='".url('/solr-search?q=&facet=itemtype:"Vrijwilligers"')."'>Onze Collectie</a></li>";
       $html .= "<li><a href='".url('/guest-user/user/login')."'>Inloggen</a></li>";
       $html .= "<li><a href='".url('/guest-user/user/register')."'>Registreren</a></li></ul>";
       return $html;
     endif;
 
     $html="<ul class='simple-nav'>";
-
-    /*
-    "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
-    "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
-    "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
-    "10" => array("kleur" => "oranje", "logo" => "clock_logo"),
-    */
 
     switch ($page->id) {
         case "8":
@@ -45,12 +39,32 @@ function simple_nav()
         case "10":
             $linkx = url('/solr-search?q=&facet=itemtype:"Kaart+historie"');
             break;
+        case "1":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Doel"');
+            break;
+        case "6":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Projecten"');
+            break;
+        case "12":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Aezel"');
+            break;
+        case "13":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Hoe"');
+            break;
+        case "11":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Samenwerking"');
+            break;
+        case "25":
+            $linkx = url('/solr-search?q=&facet=itemtype:"Info"');
+            break;
         default:
             $linkx = false;
             $namex = false;
     }
 
-    $html .= "<li><a href='".$linkx."'>Onze Collectie</a></li>";
+    if($linkx):
+        $html .= "<li><a href='".$linkx."'>Onze Collectie</a></li>";
+    endif;
     $html .= "<li><a href='".url('/solr-search?q=&facet=itemtype:"Nieuws"')."'>Nieuws</a></li>";
 
     foreach ($links as $link) :
