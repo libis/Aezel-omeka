@@ -106,7 +106,7 @@ function get_color()
             case 'Kaart':
                 return $colors['9'];
                 break;
-            case 'Kaart Historie':
+            case 'Kaart historie':
                 return $colors['10'];
                 break;
             default:
