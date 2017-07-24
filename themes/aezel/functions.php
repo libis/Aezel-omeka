@@ -51,6 +51,7 @@ function simple_nav()
     }
 
     $html .= "<li><a href='".$linkx."'>Onze Collectie</a></li>";
+    $html .= "<li><a href='".url('/solr-search?q=&facet=itemtype:"Nieuws"')."'>Nieuws</a></li>";
 
     foreach ($links as $link) :
         $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
