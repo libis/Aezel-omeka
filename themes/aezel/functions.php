@@ -12,7 +12,7 @@ function simple_nav()
     $page = get_current_record('SimplePagesPage');
 
     $links = simple_pages_get_links_for_children_pages();
-    if (!$links) :
+    if (!$links && $page->parent_id != "0") :
         $links = simple_pages_get_links_for_children_pages($page->parent_id);
     endif;
 
@@ -24,7 +24,7 @@ function simple_nav()
       return $html;
     endif;
 
-    $html="<ul class='simple-nav'>";
+    $html ="";
 
     switch ($page->id) {
         case "8":
@@ -71,7 +71,9 @@ function simple_nav()
         $html .= "<li><a href='".$link['uri']."'>".$link['label']."</a></li>";
     endforeach;
 
-    $html .="</ul>";
+    if($html):
+      $html="<ul class='simple-nav'>".$html."</ul>";
+    endif;
 
     return $html;
 }
