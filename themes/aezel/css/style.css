@@ -6530,14 +6530,19 @@ hr {
 
 .jumbotron .kijker .carousel-wrap .carousel {
   height: auto;
-  height: 400px;
   overflow: hidden;
+}
+
+.jumbotron .kijker .carousel-wrap .carousel .carousel-item {
+  padding: 2rem;
+  background: #f6f6f6;
 }
 
 .jumbotron .kijker .carousel-wrap .carousel .carousel-inner > .carousel-item > img {
   max-width: 100%;
   margin: 0 auto;
   position: static;
+  height: 350px;
 }
 
 .jumbotron .kijker .carousel-wrap .carousel .carousel-caption {
