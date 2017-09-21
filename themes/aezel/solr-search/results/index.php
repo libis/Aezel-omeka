@@ -107,18 +107,20 @@
               <div class="row">
                 <div class="result">
                     <?php if ($doc->resulttype == 'Item') :
-
+                        $ref="";
                         $item = get_db()->getTable($doc->model)->find($doc->modelid);
                         if (metadata($item, 'has files')) :?>
                               <div class="col-md-3 col-img">
-                          <?php
-                          echo link_to_item(
-                              item_image('thumbnail', array('alt' => $doc->title), 0, $item),
-                              array(),
-                              'show',
-                              $item
-                          );
-                          ?>
+                          <?php if($ref = metadata($item, array('Dublin Core', 'References'))):?>
+                              <a class="bekijk-online" href="<?php echo $ref;?>"><?php echo item_image('thumbnail', array('alt' => $doc->title), 0, $item);?></a>
+                          <?php else:
+                              echo link_to_item(
+                                  item_image('thumbnail', array('alt' => $doc->title), 0, $item),
+                                  array(),
+                                  'show',
+                                  $item
+                              );
+                          endif;?>
                           </div>
 
                           <?php endif; ?>
@@ -131,7 +133,11 @@
                         <?php $url = SolrSearch_Helpers_View::getDocumentUrl($doc); ?>
 
                         <!-- Title. -->
-                        <h2><a href="<?php echo $url; ?>" class="result-title">
+                        <?php if($ref):?>
+                          <h2><a href="<?php echo $ref; ?>" class="result-title">
+                        <?php else:?>
+                          <h2><a href="<?php echo $url; ?>" class="result-title">
+                        <?php endif; ?>
                         <?php
                         $title = is_array($doc->title) ? $doc->title[0] : $doc->title;
                         if (empty($title)) {
