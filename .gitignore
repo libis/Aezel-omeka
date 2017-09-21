@@ -23,6 +23,7 @@
 /themes/aezel/bower_components
 /themes/aezel/node_modules
 /themes/aezel/sass
+/themes/aezel/sass/_custom.scss
 /themes/aezel/.sass-cache
 /themes/aezel/css/style.css.map
 /themes/aezel/css/style.min.css.map

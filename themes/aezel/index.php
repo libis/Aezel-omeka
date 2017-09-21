@@ -28,48 +28,48 @@
 <section class='section-icons'>   <!-- Content -->
     <div class="container content-wrapper bs-docs-section ">
         <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
-        <h3  class="ontdek"><span>Onze projecten</span></h3>
+        <h3  class="ontdek"><span>Aezel websites</span></h3>
         <div class="row icons">
-          <a role="button" href="<?php echo url('wie');?>">
+          <a role="button" href="http://www.aezel.eu/genealogie">
             <div class="col-sm-3 icon-block">
                 <div class="well wie">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/Tree_logo.png");?>"><span>Wie</span></span></h2>
-                    <h1>Genealogische Databank</h1>
+                    <h1>Aezel Genealogisch</h1>
                     <p class="lees-meer">
-                      <span>Lees Meer</span>
+                      <span>Naar site</span>
                     </p>
                 </div>
             </div>
           </a>
-          <a role="button" href="<?php echo url('wat');?>">
+          <a role="button" href="http://www.aezel.eu/erfgoed">
             <div class="col-sm-3 icon-block">
                 <div class="well wat">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/book_logo.png");?>"><span>Wat</span></span></h2>
-                    <h1>Erfgoed websites</h1>
+                    <h1>Aezel<br> Erfgoed</h1>
                     <p class="lees-meer">
-                        <span>Lees Meer</span>
+                        <span>Naar site</span>
                     </p>
                 </div>
             </div>
           </a>
-          <a role="button" href="<?php echo url('waar');?>">
+          <a role="button" href="http://www.aezel.eu/geo">
             <div class="col-sm-3 icon-block">
                 <div class="well waar">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/earth_logo.png");?>"><span>Waar</span></span></h2>
-                    <h1>Geografisch kaartenbestand</h1>
+                    <h1>Aezel Geografisch</h1>
                     <p class="lees-meer">
-                        <span>Lees Meer</span>
+                        <span>Naar site</span>
                     </p>
                 </div>
             </div>
           </a>
-          <a role="button" href="<?php echo url('wanneer');?>">
+          <a role="button" href="http://www.aezel.eu/omeka/solr-search?q=&facet=itemtype:%22Kaart+historie%22">
             <div class="col-sm-3 icon-block">
                 <div class="well wanneer">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/clock_logo.png");?>"><span>Wanneer</span></span></h2>
-                    <h1>Staatskundige geschiedenis</h1>
+                    <h1>Aezel Historisch</h1>
                     <p class="lees-meer">
-                        <span>Lees Meer</span>
+                        <span>Naar site</span>
                     </p>
                 </div>
             </div>
