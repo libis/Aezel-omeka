@@ -30,7 +30,7 @@
         <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
         <h3  class="ontdek"><span>Aezel websites</span></h3>
         <div class="row icons">
-          <a role="button" href="http://www.aezel.eu/genealogie">
+          <a target="_blank" role="button" href="http://www.aezel.eu/genealogie">
             <div class="col-sm-3 icon-block">
                 <div class="well wie">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/Tree_logo.png");?>"><span>Wie</span></span></h2>
@@ -41,7 +41,7 @@
                 </div>
             </div>
           </a>
-          <a role="button" href="http://www.aezel.eu/erfgoed">
+          <a target="_blank" role="button" href="http://www.aezel.eu/erfgoed">
             <div class="col-sm-3 icon-block">
                 <div class="well wat">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/book_logo.png");?>"><span>Wat</span></span></h2>
@@ -52,7 +52,7 @@
                 </div>
             </div>
           </a>
-          <a role="button" href="http://www.aezel.eu/geo">
+          <a target="_blank" role="button" href="http://www.aezel.eu/geo/thema/eigenaars/eigenaars.php">
             <div class="col-sm-3 icon-block">
                 <div class="well waar">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/earth_logo.png");?>"><span>Waar</span></span></h2>
@@ -63,7 +63,7 @@
                 </div>
             </div>
           </a>
-          <a role="button" href="http://www.aezel.eu/omeka/solr-search?q=&facet=itemtype:%22Kaart+historie%22">
+          <a target="_blank" role="button" href="http://www.aezel.eu/aezel/solr-search?q=&facet=itemtype:%22Kaart+historie%22">
             <div class="col-sm-3 icon-block">
                 <div class="well wanneer">
                     <h2><span class="icon-title"><img class="logo" src="<?php echo img("logos/clock_logo.png");?>"><span>Wanneer</span></span></h2>
