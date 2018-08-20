@@ -45,11 +45,11 @@ a, a:hover{
 }
 
 .solr-container #solr-applied-facets ul li, .solr-container #solr-search-form button[type="submit"]{
-  background:#ae93a4;
+  background:#e8393a;
 }
 
 .solr-container #solr-search-form input[type="text"] {
-    border: 1px solid #ae93a4;
+    border: 1px solid #e8393a;
 }
 
 footer .dropdown-menu li > a {
