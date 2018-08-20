@@ -85,8 +85,9 @@ function get_color()
 {
     //colors: page id -> different css (production)
     $colors = array(
+      "0" => array("kleur" => "style.min", "logo" => "book_logo_a"),
       "7" => array("kleur" => "groen", "logo" => "Tree_logo"),
-      "8" => array("kleur" => "style.min", "logo" => "book_logo"),//default
+      "8" => array("kleur" => "rood", "logo" => "book_logo"),//default
       "9" => array("kleur" => "blauw", "logo" => "earth_logo"),
       "10" => array("kleur" => "oranje", "logo" => "clock_logo"),
       "54" => array("kleur" => "bruin", "logo" => "donkey_logo")
@@ -105,7 +106,7 @@ function get_color()
     if (!$current_page) :
         $color_facet="";$type="";
         if(isset($_GET['facet'])):
-          $possible_facets= array('Stamboom', 'Kaart', 'Kaart historie');
+          $possible_facets= array('Stamboom', 'Kaart', 'Kaart historie', 'Erfgoed website');
           $current_facets = $_GET['facet'];
 
           foreach ($possible_facets as $possible_facet) {
@@ -129,11 +130,14 @@ function get_color()
             case 'Kaart historie':
                 return $colors['10'];
                 break;
-            default:
+            case 'Erfgoed website':
                 return $colors['8'];
+                break;
+            default:
+                return $colors['0'];
         }
 
-        return $colors['8'];
+        return $colors['0'];
     endif;
 
     if (array_key_exists($current_page->id, $colors)) :
@@ -148,7 +152,7 @@ function get_color()
         endif;
     endforeach;
 
-    return $colors['8'];
+    return $colors['0'];
 }
 
 function libis_get_news($tag = "")

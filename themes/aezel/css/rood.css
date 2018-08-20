@@ -1,0 +1,58 @@
+hr {
+  border-top: 1px solid #e8393a;
+}
+
+a, a:hover{
+  color: #e8393a;
+}
+
+/* NAVBAR */
+.navbar-default {
+  background: #e8393a;
+}
+
+.navbar-default .navbar-nav .dropdown-menu {
+  background: #e8393a;
+}
+
+.navbar-default .btn-default {
+  background: #e8393a;
+}
+
+.navbar-default .navbar-toggle {
+  background: #e8393a;
+}
+
+.container .nieuws h3 {
+  border-bottom: 1px solid rgba(51,51,51,0.8);;
+}
+
+.container .simple-nav {
+  border-left: 3px solid #e8393a;
+}
+
+.container .simple-nav li {
+  border-bottom: 1px solid #f39495;
+}
+
+.exhibits #content .nav {
+  border-left: 3px solid #e8393a;
+}
+
+
+.exhibits #content .nav li {
+  border-bottom: 1px solid #f39495;
+}
+
+.solr-container #solr-applied-facets ul li, .solr-container #solr-search-form button[type="submit"]{
+  background:#ae93a4;
+}
+
+.solr-container #solr-search-form input[type="text"] {
+    border: 1px solid #ae93a4;
+}
+
+footer .dropdown-menu li > a {
+  color: #e8393a;
+}
+/*# sourceMappingURL=style.css.map */
